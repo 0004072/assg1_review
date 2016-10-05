@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Class that implements the task given in question 2.
+ */
 public class question2
 {
     /**
