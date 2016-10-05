@@ -207,7 +207,16 @@ class Student{
 
     public void setAvg() {
         // TODO: 10/4/16 Improve this in the next commit to avoid absent marks.
-        this.avg = this.tot/((float)sub_marks.size());
+        // TODO: 10/5/16 Test the method for ommitting the absent marks. 
+        int i = 0;
+        Iterator it = this.sub_marks.entrySet().iterator();
+        while(it.hasNext()){
+            Map.Entry sub = (Map.Entry)it.next();
+            float mark = (Float)sub.getValue();
+            if(mark >= 0.0f)
+                i++;
+        }
+        this.avg = this.tot/((float)i);
     }
 
     public String getGrade() {
